@@ -4736,26 +4736,9 @@ function setupCredits(){ stopHum(); try{Music.stop();}catch(e){}
     fadeOut(()=>{ jobIndex=0; epilogue=false; go('title'); fadeIn(); }); };
   addEventListener('keydown',back); addEventListener('mousedown',back);
   const L=[
-    {t:'THE BACKROOMS', f:'bold 30px Courier New', c:'#ffe9a8', h:30},
-    {t:'a small horror in three jobs and one wrong door', f:'11px Courier New', c:'#9aa0a8', h:18},
+    {t:'MADE BY CHRISTIAN LUGO', f:'bold 22px Courier New', c:'#ffe9a8', h:30},
     {g:24},
-    {t:'STARRING', f:'bold 12px Courier New', c:'#d8b86a', h:20},
-    {t:'DANNY \u2014 night-shift electrician', h:18},
-    {t:'CAPT. CLARK \u00b7 MARV (security)', h:18},
-    {t:'and the thing behind the doors', h:18},
-    {g:22},
-    {t:'ART', f:'bold 12px Courier New', c:'#d8b86a', h:20},
-    {t:'furniture & characters \u2014 Modern Interiors (LimeZu)', h:18},
-    {t:'monster \u2014 ExperimentZ', h:18},
-    {t:'free non-commercial', f:'10px Courier New', c:'#788089', h:16},
-    {g:22},
-    {t:'LEVELS', f:'bold 12px Courier New', c:'#d8b86a', h:20},
-    {t:'LVL 0 \u00b7 LVL 3999 \u00b7 LVL ! \u00b7 LEVEL FUN \u00b7 LVL 4 \u00b7 THE END', h:18},
-    {g:24},
-    {t:'DANNY MADE IT OUT.', f:'bold 13px Courier New', c:'#cfe2c0', h:20},
-    {t:'(did he?)', f:'10px Courier New', c:'#788089', h:16},
-    {g:20},
-    {t:'THANKS FOR PLAYING', f:'bold 14px Courier New', c:'#ffe9a8', h:22} ];
+    {t:'THANK YOU FOR PLAYING', f:'bold 14px Courier New', c:'#ffe9a8', h:22} ];
   let totalH=0; for(const ln of L) totalH+=(ln.g||ln.h||22);
   const maxRoll=(H*0.86)-Math.max(40,(H-totalH)/2);
   const w=room({ borderless:true, dark:0,
