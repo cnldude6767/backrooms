@@ -266,15 +266,6 @@ function blitBake(c,bk,sx0,sy0){ if(!bk) return; sy0=sy0||0; const M=24;
 const keys={};
 const KMAP={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right',w:'up',s:'down',a:'left',d:'right',W:'up',S:'down',A:'left',D:'right'};
 addEventListener('keydown',e=>{ if(e.target&&(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')) return;   // typing a password, not playing
-  if(e.key==='1'&&!menuOpen()&&scene!=='title'){ initAudio(); blip(660,.07,'triangle',.06);          // 1 \u2014 straight to LVL 3999
-    fadeOut(()=>{ go('arcade'); fadeIn(); }); e.preventDefault(); return; }
-  if(e.key==='2'&&!menuOpen()&&scene!=='title'){ initAudio(); blip(740,.07,'triangle',.06);          // 2 \u2014 LVL 3999, games done, wifi connect ready
-    fadeOut(()=>{ go('arcade'); const a=world.arc; a.parts=[true,true,true];
-      a.scroll=Math.max(0,a.LEN-W); player.x=a.SX-150-a.scroll; player.y=290; player.dir='r';
-      setHUD('<span class="job">KEY PARTS 3/3. The last machine is right there. Sign in.</span>');
-      fadeIn(); }); e.preventDefault(); return; }
-  if(e.key==='3'&&!menuOpen()&&scene!=='title'){ initAudio(); blip(820,.07,'triangle',.06);          // 3 \u2014 right after the hospital chase: locked out on the grass
-    fadeOut(()=>{ go('lockend'); fadeIn(); }); e.preventDefault(); return; }
   if(KMAP[e.key]){keys[KMAP[e.key]]=true;e.preventDefault();}
   if(camMode){ const k=e.key;
     if(k==='c'||k==='C'||k==='Escape'){ camMode=null; blip(300,.05,'square',.04); }
